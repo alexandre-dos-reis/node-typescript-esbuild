@@ -1,0 +1,17 @@
+{
+  "name": "node-typescript-esbuild",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alexandre-dos-reis/node-typescript-esbuild.git",
+  "author": "Alexandre Dos Reis <ajm.dosreis.daponte@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "",
+    "build": ""
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "esbuild": "^0.17.8",
+    "typescript": "^4.9.5"
+  }
+}
