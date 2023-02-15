@@ -8,3 +8,4 @@ The goal for this repo is to use esbuild to bundle a nodeJS api using typescript
 ## Resources
 
 - [esbuild bundling for node](https://esbuild.github.io/getting-started/#bundling-for-node)
+- [node api with esbuild](https://dev.to/franciscomendes10866/how-to-build-a-node-api-with-esbuild-8di)
