@@ -6,9 +6,10 @@
   "author": "Alexandre Dos Reis <ajm.dosreis.daponte@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"yarn watch\" \"yarn start\"",
-    "watch": "nodemon --watch src --exec 'yarn run build'",
-    "build": "esbuild src/index.ts --bundle --platform=node --target=node16.4 --outfile=dist/index.js",
+    "dev": "concurrently \"yarn build-dev\" \"yarn watch\"",
+    "watch": "nodemon dist/index.js",
+    "build-dev": "esbuild src/index.ts --watch --bundle --platform=node --target=node16.4 --outfile=dist/index.js",
+    "build-prod": "esbuild src/index.ts --bundle --platform=node --target=node16.4 --outfile=dist/index.js",
     "start": "node dist/index.js"
   },
   "devDependencies": {

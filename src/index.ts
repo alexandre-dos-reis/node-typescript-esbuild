@@ -4,7 +4,7 @@ const fastify = Fastify({
   logger: true,
 });
 
-fastify.get("/", async () => ({ hello: "TTTTEEESSSTTT" }));
+fastify.get("/", async () => ({ hello: "world" }));
 
 (async () => {
   try {
