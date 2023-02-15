@@ -6,11 +6,12 @@
   "author": "Alexandre Dos Reis <ajm.dosreis.daponte@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "concurrently \"yarn build-dev\" \"yarn watch\"",
+    "dev": "concurrently --prefix-colors \"auto\" --names \"esbuild,nodemon\" \"yarn build-dev\" \"yarn watch\"",
     "watch": "nodemon dist/index.js",
-    "build-dev": "esbuild src/index.ts --watch --bundle --platform=node --target=node16.4 --outfile=dist/index.js",
-    "build-prod": "esbuild src/index.ts --bundle --platform=node --target=node16.4 --outfile=dist/index.js",
-    "start": "node dist/index.js"
+    "build-dev": "NODE_ENV=development node --enable-source-maps esbuild.config.mjs",
+    "build-prod": "node esbuild.config.mjs",
+    "typecheck": "tsc",
+    "preview": "tsc && yarn build-prod && node dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^18.13.0",

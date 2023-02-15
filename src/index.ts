@@ -1,10 +1,11 @@
 import Fastify from "fastify";
+import { ucFirst } from "~/deep/functions/ucFirst";
 
 const fastify = Fastify({
   logger: true,
 });
 
-fastify.get("/", async () => ({ hello: "world" }));
+fastify.get("/", async () => ({ hello: ucFirst("test") }));
 
 (async () => {
   try {
